@@ -92,7 +92,6 @@ BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOT_HEADER_VERSION)
 BOARD_RAMDISK_USE_LZ4 := true
 TARGET_KERNEL_SOURCE := kernel/oppo/sm8250
 TARGET_KERNEL_CONFIG := vendor/kona-perf_defconfig vendor/oplus.config
-TARGET_KERNEL_NO_GCC := true
 
 # Platform
 BOARD_USES_QCOM_HARDWARE := true
@@ -140,6 +139,7 @@ VENDOR_SECURITY_PATCH := 2025-08-01
 # SEPolicy
 include device/qcom/sepolicy_vndr/SEPolicy.mk
 include hardware/oplus/sepolicy/qti/SEPolicy.mk
+include device/lineage/sepolicy/libion/sepolicy.mk
 
 # Verified Boot
 BOARD_AVB_ENABLE := true
